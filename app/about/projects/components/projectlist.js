@@ -1,5 +1,5 @@
-export default async function ProjectList() {
-  const response = await fetch('http://localhost:3001/repos', { cache: 'no-store' });
+export async function ProjectList() {
+  const response = await fetch("http://localhost:3001/repos");
   const repos = await response.json();
   return (
     <ul>
