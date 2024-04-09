@@ -1,7 +1,7 @@
 export function ProjectListLoading() {
   return (
     <ul className="space-y-8">
-      {Array(3)
+      {Array(10)
         .fill(0)
         .map((_el, index) => (
           <li key={index} className="mb-4">

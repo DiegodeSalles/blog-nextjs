@@ -1,8 +1,11 @@
 import Card from "@/components/card";
 
 export async function ProjectList() {
-  const response = await fetch("http://localhost:3001/repos");
+  const response = await fetch("http://localhost:3001/repos", {
+    cache: "no-cache",
+  });
   const repos = await response.json();
+  // throw new Error("oops");
   return (
     <ul className="grid md:grid-cols-2 gap-4">
       {repos.map((repo) => (
