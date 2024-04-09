@@ -1,7 +1,7 @@
-export default function Card({ link, className, children }) {
+export default function Card({ className, children }) {
   return (
-    <div className="border rounded-md border-gray-600 p-4">
-      <a href={link} className={className}>{children}</a>
+    <div className={`border rounded-md border-gray-600 p-4 ${className}`}>
+      {children}
     </div>
   );
 }

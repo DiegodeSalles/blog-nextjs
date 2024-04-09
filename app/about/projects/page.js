@@ -8,7 +8,7 @@ export default async function ProjectsPage() {
   const repos = await response.json();
 
   return (
-    <div className="p-20">
+    <div>
       <h1 className="m-8 text-xl text-center">Projects</h1>
 
       <div className="mb-8">Hello this is the list of my repos!</div>
