@@ -28,23 +28,21 @@ export default async function BlogPostsPage() {
 
       <ul className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {posts.map((post) => {
-          const data = post.frontmatter.date
-            ? new Date(post.frontmatter.date)
+          const { frontmatter, slug } = post;
+          const { title, description, date } = frontmatter;
+          const data = date
+            ? new Date(date).toLocaleDateString()
             : "No date added";
           return (
-            <li key={post.slug}>
+            <li key={slug}>
               <Link
-                href={`/blog/${post.slug}`}
+                href={`/blog/${slug}`}
                 className="text-2xl font-semibold text-gray-800 dark:text-gray-200"
               >
-                {post.frontmatter.title}
+                {title}
               </Link>
-              <div className="text-gray-400 text-md mt-2">
-                {post.frontmatter.description}
-              </div>
-              <div className="text-gray-400 text-sm mt-2">
-                {data.toLocaleDateString()}
-              </div>
+              <div className="text-gray-400 text-md mt-2">{description}</div>
+              <div className="text-gray-400 text-sm mt-2">{data}</div>
             </li>
           );
         })}
