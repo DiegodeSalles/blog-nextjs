@@ -6,11 +6,6 @@ export function Navigation() {
     <nav className="font-mono">
       <ul className="flex justify-center md:space-x-4 flex-col md:flex-row w-full">
         <li>
-          <Link className={styles.link} href="/">
-            Home
-          </Link>
-        </li>
-        <li>
           <Link className={styles.link} href="/about">
             About
           </Link>
@@ -23,6 +18,11 @@ export function Navigation() {
         <li>
           <Link className={styles.link} href="/photos">
             Photos
+          </Link>
+        </li>
+        <li>
+          <Link className={styles.link} href="/blog">
+            Blog
           </Link>
         </li>
       </ul>
