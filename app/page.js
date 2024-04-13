@@ -16,7 +16,6 @@ export default function Home({ searchParams }) {
   const cards =
     isVisible && names.map((name, index) => <Card key={index}>{name}</Card>);
 
-  console.log(searchParams);
   if (searchParams.error) throw new Error("Oops");
 
   return (

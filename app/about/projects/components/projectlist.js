@@ -5,7 +5,6 @@ export async function ProjectList() {
     cache: "no-cache",
   });
   const repos = await response.json();
-  // throw new Error("oops");
   return (
     <ul className="grid md:grid-cols-2 gap-4">
       {repos.map((repo) => (
