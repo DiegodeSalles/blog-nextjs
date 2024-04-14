@@ -2,10 +2,9 @@ import { getPosts } from "@/lib/posts";
 import Link from "next/link";
 
 export default async function BlogPostsPage({ searchParams }) {
-  // console.log(searchParams.tags);
   const tags = searchParams.tags?.split(",");
-  // console.log(tags);
-  const posts = await getPosts({ tags });
+  const order = searchParams.order ?? "newest";
+  const posts = await getPosts({ tags, newest: order === "newest" });
 
   return (
     <>
@@ -16,6 +15,20 @@ export default async function BlogPostsPage({ searchParams }) {
       </div>
 
       <hr />
+
+      <div className="mb-8">
+        Display&nbsp;
+        {order === "newest" && (
+          <Link href="/blog?order=oldest" className="underline">
+            Oldest
+          </Link>
+        )}
+        {order === "oldest" && (
+          <Link href="/blog?order=newest" className="underline">
+            Newest
+          </Link>
+        )}
+      </div>
 
       <ul className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {posts.map((post) => {
