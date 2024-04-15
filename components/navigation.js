@@ -6,6 +6,11 @@ export function Navigation() {
     <nav className="font-mono">
       <ul className="flex justify-center md:space-x-4 flex-col md:flex-row w-full">
         <li>
+          <Link href="/" className={`${styles.link} inline md:hidden`}>
+            Home
+          </Link>
+        </li>
+        <li>
           <Link className={styles.link} href="/about">
             About
           </Link>

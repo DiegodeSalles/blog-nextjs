@@ -1,3 +1,4 @@
+import H1 from "@/components/h1";
 import Pagination from "@/components/pagination";
 import { getPosts } from "@/lib/posts";
 import Link from "next/link";
@@ -16,7 +17,7 @@ export default async function BlogPostsPage({ searchParams }) {
 
   return (
     <>
-      <h1 className="m-8 text-xl text-center">Recent Posts</h1>
+      <H1>Recent Posts</H1>
 
       <div className="text-lg text-gray-600 dark:text-gray-400 mb-8">
         Stay up to date with most recent posts

@@ -1,7 +1,10 @@
+import H1 from "@/components/h1";
+
 export default function NotFound() {
   return (
     <div>
-      <h1 className="text-2xl">404</h1>
+      <H1>404</H1>
+
       <div>Page not found!</div>
     </div>
   );
