@@ -3,10 +3,13 @@ import styles from "./navigation.module.css";
 
 export function Navigation() {
   return (
-    <nav className="font-mono">
+    <nav className="font-mono dark:text-[#bb80b3]">
       <ul className="flex justify-center md:space-x-4 flex-col md:flex-row w-full">
         <li>
-          <Link href="/" className={`${styles.link} inline md:hidden`}>
+          <Link
+            href="/"
+            className={`${styles.link} dark:hover:bg-[#363f45] dark:hover:text-[#de605b] inline md:hidden`}
+          >
             Home
           </Link>
         </li>

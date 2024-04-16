@@ -42,11 +42,11 @@ export default async function Home() {
         <ul className="font-mono">
           {posts.map((post) => (
             <li key={post.slug}>
-              <span className="text-gray-400">
-                {post.frontmatter.date}&nbsp;{" "}
+              <span className="dark:text-gray-400 text-gray-500">
+                {new Date(post.frontmatter.date).toLocaleDateString()}&nbsp;{" "}
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="underline hover:text-red-400 dark:hover:text-blue-400"
+                  className="underline dark:text-gray-400 text-gray-600 hover:text-red-400 dark:hover:text-[#99c794]"
                 >
                   {post.frontmatter.title}
                 </Link>

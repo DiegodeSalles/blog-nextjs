@@ -54,8 +54,12 @@ export default async function BlogPostsPage({ searchParams }) {
               >
                 {title}
               </Link>
-              <div className="text-gray-400 text-md mt-2">{description}</div>
-              <div className="text-gray-400 text-sm mt-2">{data}</div>
+              <div className="dark:text-gray-400 text-gray-600 text-md mt-2">
+                {description}
+              </div>
+              <div className="dark:text-gray-400 text-gray-500 text-sm mt-2">
+                {data}
+              </div>
             </li>
           );
         })}

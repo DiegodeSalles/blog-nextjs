@@ -20,10 +20,10 @@ export default function DarkMode({ defaultTheme }) {
       >
         <span
           className={`duration-200 ${
-            theme === "light" ? "translate-x-[21px]" : ""
+            theme !== "dark" ? "translate-x-[21px]" : ""
           }`}
         >
-          {theme === "dark" ? "☀️" : "🌙"}
+          {theme === "dark" ? "🌙" : "☀️"}
         </span>
       </span>
     </label>

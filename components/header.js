@@ -11,7 +11,7 @@ export default function Header() {
         <div className="hidden md:block">
           <Link
             href="/"
-            className="font-mono text-xl hover:dark:text-blue-400 hover:text-red-400"
+            className="font-mono text-xl dark:text-[#ecc856] hover:dark:text-blue-400 hover:text-red-400"
           >
             Diego de Salles
           </Link>

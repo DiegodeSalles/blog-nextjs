@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-white text-gray-700 container mx-auto dark:bg-gray-900 dark:text-gray-300 max-w-2xl transition-colors duration-700;
+  @apply bg-[#cdd3de] text-gray-700 container mx-auto dark:bg-[#1d2225] dark:text-gray-300 max-w-2xl transition-colors duration-700;
 }
 
 hr {

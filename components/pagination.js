@@ -21,7 +21,7 @@ export default function Pagination({ pageCount }) {
         return (
           <li key={pageNumber}>
             <Link
-              className={`${
+              className={`hover:dark:text-red-400 hover:text-blue-400 ${
                 pageNumber === page
                   ? "decoration-gray-400 underline-offset-4 underline decoration-4"
                   : ""
